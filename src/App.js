@@ -1,19 +1,18 @@
 import './App.css';
 import { CgYinyang } from "react-icons/cg";
-import Compensation from "./components/Compensation";
+import Home from "./components/Home";
+import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import navbar from "./components/navbar"
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <CgYinyang className={"text-white align-center"} />
-        <p>
-          Sherpa
-        </p>
-      </header>
-
-
-    </div>
+    <Router>
+      <navbar/>
+      <Routes>
+        <Route path='/' exact component={Home} />
+      </Routes>
+    </Router>
   );
 }
 
